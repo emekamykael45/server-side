@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>ServerSide Panel</title>
+    <link rel="icon" href="images/">
+    
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <!-- Font-Awesome CSS CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/shortcode.css"/>
+    
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+    <body>
+
+        <!-- Main Page Content Starts Here -->
+        
+        <!-- Sidenav Starts Here -->
+        <div class="sidenav">
+            <a href="" class="logo">
+                <img src="images/dashboard-logo.png" class="sidebar-img">
+            </a>
+            <a href="">
+                <div class="add-link">+</div>
+            </a>
+        </div>
+        <!-- Sidenav Ends Here -->
+            
+
+        <div class="main">
+            <div class="user-id">
+                <img src="images/user-id-img.png">
+                <p>Adeleke Tijani</p>
+            </div>
+
+            <h3 class="welcome-text">Welcome, Adeleke</h3>
+            <br><br>
+
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item nav-item-one">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-shortcode" role="tab" aria-controls="pills-home" aria-selected="true">Shortcode</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-merchants" role="tab" aria-controls="pills-profile" aria-selected="false">Merchants</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-shortcode" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="row search-div">
+                        <div class="col-md-6 input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><img src="images/search-icon.png"></span>
+                            </div>
+                            <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="Search..." aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="col-md-6">
+                            <!-- Launch Modal Button-->
+                            <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
+                                Add Shortcode<span>+</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <p class="modal-title" id="exampleModalLabel">Add a shortcode</p>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group email-form-group">
+                                            <label for="exampleInputEmail1">Select Merchant</label>
+                                            <select class="form-control">
+                                                <option>Pick a Merchant</option>
+                                                <option>GTBank</option>
+                                                <option>First Bank</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputNumber1">SMS Shortcode</label>
+                                            <input type="number" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputText1">Shortcode URL</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputText1">Keyword</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">CREATE SHORTCODE</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table" id="myTable">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="first-col">Merchant Name</th>
+                                    <th scope="col">SMS Shortcode</th>
+                                    <th scope="col">Shortcode URL</th>
+                                    <th scope="col">Keyword</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="first-col">GTBank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Fidelity Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Keystone Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Keystone Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Keystone Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Keystone Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Keystone Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Keystone Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Keystone Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Keystone Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-merchants" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="row search-div">
+                        <div class="col-md-6 input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><img src="images/search-icon.png"></span>
+                            </div>
+                            <input type="text" id="myInputOne" onkeyup="myFunction()" class="form-control" placeholder="Search..." aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="col-md-6">
+                            <!-- Launch Modal Button-->
+                            <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal1">
+                                Add Merchant<span>+</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <p class="modal-title" id="exampleModalLabel">Add a merchant</p>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group email-form-group">
+                                            <label for="exampleInputText1">Merchant Name</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputText1">Contact Person</label>
+                                            <div class="name-field">
+                                                <input type="text" class="form-control first-name-input" placeholder="First Name">
+                                                <input type="text" class="form-control last-name-input" placeholder="Last Name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email</label>
+                                            <input type="email" class="form-control" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputNumber1">Phone Number</label>
+                                            <input type="number" class="form-control">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">CREATE MERCHANT</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table" id="myTableOne">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="first-col">Merchant Name</th>
+                                    <th scope="col">Contact Person</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Phone Number</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="first-col">GTBank</td>
+                                    <td>Mike Adenuga</td>
+                                    <td>mike@gtbank.com</td>
+                                    <td>09065582156</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Fidelity Bank</td>
+                                    <td>Femi Otedola</td>
+                                    <td>femi@forteoil.com</td>
+                                    <td>09065582156</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Keystone Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Keystone Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Keystone Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Keystone Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Keystone Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Keystone Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Keystone Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-col">Keystone Bank</td>
+                                    <td>34116</td>
+                                    <td>http://www.gtbank.com</td>
+                                    <td>GTB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Page Content Ends Here -->
+
+            
+        
+        <script>
+            function myFunction() {
+                // Declare variables 
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("myTable");
+                tr = table.getElementsByTagName("tr");
+            
+                // Loop through all table rows, and hide those who don't match the search query
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                        } else {
+                        tr[i].style.display = "none";
+                        }
+                    } 
+                }
+
+                // Declare variables 
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("myInputOne");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("myTableOne");
+                tr = table.getElementsByTagName("tr");
+            
+                // Loop through all table rows, and hide those who don't match the search query
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                        } else {
+                        tr[i].style.display = "none";
+                        }
+                    } 
+                }
+            }
+        </script>
+    
+        <!-- JS -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    </body>
+
+</html>

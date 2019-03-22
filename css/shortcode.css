@@ -1,0 +1,370 @@
+@font-face{
+    font-family: 'CircularStd-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/CircularStd-Book.woff") format("opentype");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "CircularStd-Book", Arial, sans-serif;
+    font-size: 0.95rem;
+    color: #4B575C;
+    background: #F4F7FA;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidenav {
+    height: 100%;
+    width: 70px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1875F0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 13px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav a img{
+    width: 40px;
+}
+
+.sidenav a .add-link{
+    margin-top: 140px;
+    width: 40px;
+    height: 40px;
+    background: #156BDC;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 1.05em;
+    color: #E8E8E8;
+}
+
+.main {
+    margin-left: 130px; /* Same as the width of the sidenav */
+    margin-top: 65px;
+    padding: 0px 10px;
+}
+
+.main .user-id{
+    position: absolute;
+    display: flex;
+    right: 50px;
+    top: 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 11px 32px rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.main .user-id img{
+    width: 40px;
+    height: 40px;
+    margin-right: 17px;
+}
+
+.main .user-id p{
+    font-size: 1em;
+    margin: 0;
+    margin-top: 10px;
+    color: #333333;
+}
+
+.main .welcome-text{
+    color: #105FC7;
+}
+
+.main .nav-pills{
+    margin-bottom: 30px !important;
+}
+
+.main .nav-pills .nav-item-one{
+    margin-right: 25px;
+}
+
+.main .nav-pills .nav-item .nav-link{
+    background: #FFFFFF;
+    box-shadow: 0px 1.5px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    padding: 12px 30px;
+    color: #333333;
+}
+
+.main .nav-pills .nav-item .nav-link.active{
+    background: #156BDC;
+    color: #FFFFFF;
+}
+
+.main .tab-content{
+    padding: 0;
+}
+
+.main .tab-pane{
+    background: #FFFFFF;
+    padding: 0;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.main .tab-pane .search-div{
+    padding: 10px 40px;
+    margin-bottom: -16px;
+}
+
+.main .tab-pane .search-div .input-group .input-group-prepend .input-group-text{
+    border: 0.75px solid #CAD9EF;
+    border-right: none;
+    background: #fff;
+}
+
+.main .tab-pane .search-div .input-group-prepend .input-group-text img{
+    width: 13px;
+}
+
+.main .tab-pane .search-div .input-group input{
+    border: 0.75px solid #CAD9EF;
+    border-left: none;
+    margin-left: -10px;
+    max-width: 80%;
+}
+
+.main .tab-pane .search-div button{
+    border: 2px solid #156BDC;
+    border-radius: 3px;
+    background: none;
+    font-size: 0.9em;
+    padding: 7px 20px !important;
+    margin-left: -50px;
+    color: #156BDC;
+    font-weight: bold;
+}
+.main .tab-pane .search-div button span{
+    margin-left: 10px;
+}
+
+.modal .modal-content{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.modal .modal-content .modal-title{
+    margin: 0 !important;
+    margin-left: 35% !important;
+    padding: 0 !important;
+    color: #105FC7;
+}
+
+.modal .modal-content .modal-body form{
+    margin-top: 0px;
+    padding: 30px 40px;
+    font-size: 0.85em !important;
+}
+
+.modal .modal-content .modal-body form .email-form-group{
+    margin-top: 0px;
+}
+
+.modal .modal-content .modal-body form .form-group label{
+    color: #4B575C;
+}
+
+.modal .modal-content .modal-body form .form-group select{
+    font-size: 1em;
+}
+
+.modal .modal-content .modal-body form .form-group input{
+    font-size: 1.05em;
+}
+
+.modal .modal-content .modal-body form .form-group .name-field{
+    display: flex;
+}
+
+.modal .modal-content .modal-body form .form-group .name-field .first-name-input{
+    border-right: none;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.modal .modal-content .modal-body form .form-group .name-field .last-name-input{
+    border-left: none;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.modal .modal-content .modal-body form button{
+    background: #1875F0;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+
+.main .tab-pane .table-responsive{
+    margin-bottom: 50px;
+}
+
+.main .tab-pane table{
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.main .tab-pane table thead tr{
+    background: #DFE7F2;
+}
+
+.main .tab-pane table thead tr th.first-col{
+    padding-left: 40px !important;
+}
+
+.main .tab-pane table tbody tr td{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.main .tab-pane table tbody tr td.first-col{
+    padding-left: 40px !important;
+}
+
+
+
+
+
+@media screen and (max-width: 984px) {
+    .main .tab-pane .search-div button{
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .main {
+        margin-left: 90px; /* Same as the width of the sidenav */
+    }
+
+    .main .tab-pane{
+        width: 97%;
+    }   
+}
+
+@media screen and (max-width: 767px) {
+    .main .tab-pane .search-div button{
+        margin-bottom: 15px;
+    }
+
+    .table{
+        width: 120% !important;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .main {
+        margin-top: 130px;
+    }
+
+    .main .user-id{
+        right: 20px;
+    }
+
+    .table{
+        width: 170% !important;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .main .tab-pane .search-div{
+        padding: 10px 20px;
+    }
+
+    .main .tab-pane .search-div .input-group input{
+        max-width: 100%;
+    }
+
+    .table{
+        width: 250% !important;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .main .nav-pills .nav-item-one{
+        margin-right: 30px;
+        margin-bottom: 20px;
+    }
+
+    .modal .modal-content .modal-title{
+        margin-left: 30% !important;
+    }
+
+    .modal .modal-content{
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .modal .modal-content .modal-body{
+        padding: 0px !important;
+    }
+
+    .table{
+        width: 300% !important;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .main {
+        margin-left: 55px; /* Same as the width of the sidenav */
+    }
+
+    .sidenav {
+        width: 50px;
+    }
+    
+    .sidenav a {
+        padding: 6px 6px 6px 9px;
+    }
+    
+    .sidenav a img{
+        width: 35px;
+    }
+    
+    .sidenav a .add-link{
+        width: 35px;
+        height: 35px;
+    }
+
+    .main .tab-pane{
+        width: 99%;
+    }
+}
+
+
+
+/**Responsive Starts Here**/
+
+
+
+
+/**Responsive Ends Here**/
